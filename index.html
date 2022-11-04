@@ -246,11 +246,13 @@
     Username : "adhikareeprayush@gmail.com",
     Password : "HelloWorld123",
     To : 'adhikareeprayush@gmail.com',
-    From : "getElementById("email").value,
+    From : getElementById("email").value,
     Subject : "New COntact Form Enquiry",
-    Body : "And this is the body"
+    Body : "Name: " + document.getElementById("name").value
+	+ "<br>"Email: " + document.getElementById("email").value 	
+	+ "<br>"Message: " + document.getElementById("message").value				
 }).then(
-  message => alert(message)
+  message => alert("Message Sent Successfully")
 );
 			}
 			
