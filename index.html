@@ -242,10 +242,12 @@
 		<script>
 			function sendEmail(){
 				Email.send({
-    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+    Host : "smtp.gmail.com",
+    Username : "adhikareeprayush@gmail.com",
+    Password : "HelloWorld123",
     To : 'adhikareeprayush@gmail.com',
-    From : "document.getElementById("email").value,
-    Subject : "New Contact Form Enquiry",
+    From : "getElementById("email").value,
+    Subject : "New COntact Form Enquiry",
     Body : "And this is the body"
 }).then(
   message => alert(message)
