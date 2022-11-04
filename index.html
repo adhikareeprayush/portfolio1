@@ -213,6 +213,24 @@
 							<input name="send" type="submit" class="form-control" id="send" value="SEND ME">
 						</form>
 					</div>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+		<script>
+			function sendEmail(){
+				Email.send({
+    Host : "smtp.gmail.com",
+    Username : "prayushadhikari19@gmail.com",
+    Password : "9807077878",
+    To : 'adhikareeprayush@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New COntact Form Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+	+ "<br>"Email: " + document.getElementById("email").value 	
+	+ "<br>"Message: " + document.getElementById("message").value				
+}).then(
+  message => alert("Message Sent Successfully")
+);
+			}
+		</script>
 					<div class="col-md-1 col-sm-1"></div>
 				</div>
 			</div>
@@ -238,25 +256,6 @@
 		<!-- end footer -->
 
 	</div>
-		<script src="https://smtpjs.com/v3/smtp.js"></script>
-		<script>
-			function sendEmail(){
-				Email.send({
-    Host : "smtp.gmail.com",
-    Username : "prayushadhikari19@gmail.com",
-    Password : "9807077878",
-    To : 'adhikareeprayush@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New COntact Form Enquiry",
-    Body : "Name: " + document.getElementById("name").value
-	+ "<br>"Email: " + document.getElementById("email").value 	
-	+ "<br>"Message: " + document.getElementById("message").value				
-}).then(
-  message => alert("Message Sent Successfully")
-);
-			}
-		</script>
-		
 		<!-- jQuery -->
 		<script src="js/jquery.js"></script>
 		v
